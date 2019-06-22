@@ -5,10 +5,11 @@ Email: allan@clchang.net
 Github: https://github.com/clchangnet
 Description: Wordpress API
 """
-import urllib.parse
-import json
-import requests
 
+import json
+import urllib.parse
+
+import requests
 
 DEFAULT_METHODS = {
     "get_posts": "wp-json/wp/v2/posts?_embed",
