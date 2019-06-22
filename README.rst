@@ -10,7 +10,7 @@ Overview
     * - docs
       - |docs|
     * - tests
-      - | |travis| |codecov|
+      - | |travis|
     * - package
       - | |version| |wheel|
         | |supported-versions|
@@ -21,10 +21,6 @@ Overview
 .. |travis| image:: https://travis-ci.org/clchangnet/pywordapi.svg?branch=master
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/clchangnet/pywordapi
-
-.. |codecov| image:: https://codecov.io/github/clchangnet/pywordapi/coverage.svg?branch=master
-    :alt: Coverage Status
-    :target: https://codecov.io/github/clchangnet/pywordapi
 
 .. |version| image:: https://img.shields.io/pypi/v/pywordapi.svg
     :alt: PyPI Package latest release

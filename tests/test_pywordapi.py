@@ -1,6 +1,5 @@
-
-from pywordapi.cli import main
+from pywordapi import wordpress
 
 
 def test_main():
-    assert main([]) == 0
+    pass
