@@ -35,7 +35,7 @@ extlinks = {
     "pr": ("https://github.com/clchangnet/pywordapi/pull/%s", "PR #"),
 }
 html_theme = "sphinx_rtd_theme"
-html_theme_options = {"githuburl": "https://github.com/clchangnet/pywordapi/"}
+# html_theme_options = {"githuburl": "https://github.com/clchangnet/pywordapi/"}
 
 html_use_smartypants = True
 html_last_updated_fmt = "%b %d, %Y"
