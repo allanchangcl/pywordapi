@@ -12,7 +12,8 @@ Overview
     * - tests
       - | |travis| |codecov|
     * - package
-      - | |version| |wheel| |supported-versions|
+      - | |version| |wheel|
+        | |supported-versions|
 .. |docs| image:: https://readthedocs.org/projects/pywordapi/badge/?style=flat
     :target: https://readthedocs.org/projects/pywordapi
     :alt: Documentation Status
