@@ -9,11 +9,6 @@ import urllib.parse
 import json
 import requests
 
-"""
-get_post
-get_category
-get_images
-"""
 
 DEFAULT_METHODS = {
     "get_posts": "wp-json/wp/v2/posts?_embed",
@@ -35,15 +30,17 @@ class ApiCall:  # pylint: disable=too-few-public-methods
 
     def _build_post_request(self, method_name):
         """docstring for _build_post_request"""
-        # self.query += urllib.parse.urljoin(self.api_url, DEFAULT_METHODS[method_name])
-        self.query = urllib.parse.urljoin(self.api_url, DEFAULT_METHODS[method_name])
+        self.query = urllib.parse.urljoin(
+            self.api_url,
+            DEFAULT_METHODS[method_name]
+            )
 
 
 class Wordpress(ApiCall):
     """ make api call and retrieve postdata from wordpress sites"""
 
     def __getattr__(self, method_name):
-        """ Return a callable API method if `method` is in self.DEFAULT_METHODS """
+        """ Return a callable API method if `method` is in DEFAULT_METHODS """
         if method_name in DEFAULT_METHODS:
 
             def handler_function(*args):
