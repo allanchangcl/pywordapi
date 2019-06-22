@@ -16,16 +16,18 @@ get_images
 """
 
 DEFAULT_METHODS = {
-        'get_posts' : 'wp-json/wp/v2/posts?_embed',
-        'get_categories': 'wp-json/wp/v2/categories'
-        }
+    "get_posts": "wp-json/wp/v2/posts?_embed",
+    "get_categories": "wp-json/wp/v2/categories",
+}
 
-class ApiCall: # pylint: disable=too-few-public-methods
+
+class ApiCall:  # pylint: disable=too-few-public-methods
     """ contruct the request url """
+
     def __init__(self, api_url, proxy=None):
         self.api_url = api_url
         self.proxy = proxy
-        self.query = ''
+        self.query = ""
 
     def request(self, method_name):
         """ build the api url """
@@ -36,14 +38,18 @@ class ApiCall: # pylint: disable=too-few-public-methods
         # self.query += urllib.parse.urljoin(self.api_url, DEFAULT_METHODS[method_name])
         self.query = urllib.parse.urljoin(self.api_url, DEFAULT_METHODS[method_name])
 
+
 class Wordpress(ApiCall):
     """ make api call and retrieve postdata from wordpress sites"""
+
     def __getattr__(self, method_name):
         """ Return a callable API method if `method` is in self.DEFAULT_METHODS """
         if method_name in DEFAULT_METHODS:
+
             def handler_function(*args):
                 """docstring for handlerFunction"""
                 return self._make_request(method_name, args)
+
             return handler_function
         raise AttributeError
 
