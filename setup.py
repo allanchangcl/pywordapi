@@ -77,7 +77,7 @@ setup(
         "python wordpress",
     ],
     # python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*",
-    python_requires=">=3.7",
+    # python_requires=">=3.7",
     install_requires=[
         # eg: 'aspectlib==1.1.1', 'six>=1.7',
         "requests"
