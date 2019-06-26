@@ -59,14 +59,23 @@ class Wordpress(ApiCall):
         return True
 
     @staticmethod
-    def _http_get(url):
-        response = requests.get(url)
-        return response.content
+    def _http_get(url, proxy):
+        proxyDict = None
+        if proxy is not None:
+            proxyDict = {
+                "http": proxy,
+                "https": proxy
+                }
+        try:
+            response = requests.get(url, proxies=proxyDict)
+            return response.content
+        except requests.ConnectionError:
+            return json.dumps([{'error': 'ConnectionError'}])
 
     def _make_request(self, method_name, args):
         """docstring for _make_request"""
         self.request(method_name)
         if self.is_empty(args):
-            data = self._http_get(self.query)
+            data = self._http_get(self.query, self.proxy)
             return json.loads(data)[0]
         return None
