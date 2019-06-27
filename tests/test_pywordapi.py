@@ -35,12 +35,13 @@ def test_get_categories_from_non_wordpress_site():
     api_url = "https://httpbin.org/"
     api = wordpress.Wordpress(api_url)
     results = api.get_categories()
-    # print(results['error'])
+    # print(results)
     assert isinstance(results, dict) is True
 
 # def test_get_posts_with_proxy():
     # api_url = "https://demo.wp-api.org/"
-    # api_url = "htt   # proxy_url = ""
+    # api_url = ""
+    # # proxy_url = ""
     # api = wordpress.Wordpress(api_url, proxy_url)
     # results = api.get_posts()
     # assert isinstance(results, dict) is True

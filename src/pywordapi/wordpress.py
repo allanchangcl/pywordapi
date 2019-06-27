@@ -77,5 +77,8 @@ class Wordpress(ApiCall):
         self.request(method_name)
         if self.is_empty(args):
             data = self._http_get(self.query, self.proxy)
-            return json.loads(data)[0]
+            try:
+                return json.loads(data)[0]
+            except Exception:
+                return json.loads('{"error": "JsonDecodeError"}')
         return None
