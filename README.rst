@@ -58,7 +58,7 @@ Get categories
   api = wordpress.Wordpress(api_url)
   results = api.get_categories()
 
-results will return instance of type dict
+Variable **results** will return instance of type dict
 
 
 Documentation
