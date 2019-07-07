@@ -4,33 +4,23 @@ Overview
 
 .. start-badges
 
-.. list-table::
-    :stub-columns: 1
-
-    * - docs
-      - |docs|
-    * - tests
-      - | |travis|
-    * - package
-      - | |version| |wheel|
-        | |supported-versions|
-.. |docs| image:: https://readthedocs.org/projects/pywordapi/badge/?style=flat
+.. image:: https://readthedocs.org/projects/pywordapi/badge/?style=flat
     :target: https://readthedocs.org/projects/pywordapi
     :alt: Documentation Status
 
-.. |travis| image:: https://travis-ci.org/clchangnet/pywordapi.svg?branch=master
+.. image:: https://travis-ci.org/clchangnet/pywordapi.svg?branch=master
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/clchangnet/pywordapi
 
-.. |version| image:: https://img.shields.io/pypi/v/pywordapi.svg
+.. image:: https://img.shields.io/pypi/v/pywordapi.svg
     :alt: PyPI Package latest release
     :target: https://pypi.org/project/pywordapi
 
-.. |wheel| image:: https://img.shields.io/pypi/wheel/pywordapi.svg
+.. image:: https://img.shields.io/pypi/wheel/pywordapi.svg
     :alt: PyPI Wheel
     :target: https://pypi.org/project/pywordapi
 
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/pywordapi.svg
+.. image:: https://img.shields.io/pypi/pyversions/pywordapi.svg
     :alt: Supported versions
     :target: https://pypi.org/project/pywordapi
 
@@ -43,7 +33,7 @@ Python Wordpress Api Library
 Installation
 ============
 
-::
+To install the Pywordape package::
 
     pip install pywordapi
 
