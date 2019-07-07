@@ -28,7 +28,7 @@ Overview
 
 Python Wordpress Api Library
 
-* Free software: MIT license
+ **Pywordapi** allows a simple way to get data in and out of WordPress over HTTP, using python and Wordpress REST API.
 
 Installation
 ============
@@ -42,28 +42,3 @@ Documentation
 
 
 https://pywordapi.readthedocs.io/
-
-
-Development
-===========
-
-To run the all tests run::
-
-    tox
-
-Note, to combine the coverage data from all the tox environments run:
-
-.. list-table::
-    :widths: 10 90
-    :stub-columns: 1
-
-    - - Windows
-      - ::
-
-            set PYTEST_ADDOPTS=--cov-append
-            tox
-
-    - - Other
-      - ::
-
-            PYTEST_ADDOPTS=--cov-append tox
