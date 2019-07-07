@@ -37,6 +37,30 @@ To install the Pywordape package::
 
     pip install pywordapi
 
+Usage
+=====
+
+Get posts
+
+.. highlight::language
+
+from pywordapi import wordpress
+api_url = "https://demo.wp-api.org/"
+api = wordpress.Wordpress(api_url)
+results = api.get_posts()
+
+Get categories
+
+.. highlight::language
+
+from pywordapi import wordpress
+api_url = "https://demo.wp-api.org/"
+api = wordpress.Wordpress(api_url)
+results = api.get_categories()
+
+results will return instance of type dict
+
+
 Documentation
 =============
 
