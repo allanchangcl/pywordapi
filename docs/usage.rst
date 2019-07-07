@@ -4,4 +4,4 @@ Usage
 
 To use Pywordapi in a project::
 
-	import pywordapi
+	import pywordapi - Test
