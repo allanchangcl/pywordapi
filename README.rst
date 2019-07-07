@@ -42,21 +42,21 @@ Usage
 
 Get posts
 
-.. highlight::language
+.. code-block:: python
 
-from pywordapi import wordpress
-api_url = "https://demo.wp-api.org/"
-api = wordpress.Wordpress(api_url)
-results = api.get_posts()
+  from pywordapi import wordpress
+  api_url = "https://demo.wp-api.org/"
+  api = wordpress.Wordpress(api_url)
+  results = api.get_posts()
 
 Get categories
 
-.. highlight::language
+.. code-block:: python
 
-from pywordapi import wordpress
-api_url = "https://demo.wp-api.org/"
-api = wordpress.Wordpress(api_url)
-results = api.get_categories()
+  from pywordapi import wordpress
+  api_url = "https://demo.wp-api.org/"
+  api = wordpress.Wordpress(api_url)
+  results = api.get_categories()
 
 results will return instance of type dict
 
