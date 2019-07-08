@@ -33,7 +33,7 @@ Python Wordpress Api Library
 Installation
 ============
 
-To install the Pywordape package::
+To install the Pywordapi package::
 
     pip install pywordapi
 
