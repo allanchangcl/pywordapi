@@ -60,6 +60,16 @@ Get categories
 
 Variable **results** will return instance of type dict
 
+Using proxy
+
+.. code-block:: python
+
+  from pywordapi import wordpress
+  api_url = "https://demo.wp-api.org/"
+  proxy_url = "http://username:password@IP_ADDRESS:PORT"
+  api = wordpress.Wordpress(api_url, proxy_url)
+  results = api.get_posts()
+
 
 Documentation
 =============
