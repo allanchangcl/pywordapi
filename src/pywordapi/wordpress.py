@@ -20,8 +20,9 @@ DEFAULT_METHODS = {
 class ApiCall:  # pylint: disable=too-few-public-methods
     """ contruct the request url """
 
-    def __init__(self, api_url, proxy=None):
+    def __init__(self, api_url, headers=None, proxy=None):
         self.api_url = api_url
+        self.headers = headers
         self.proxy = proxy
         self.query = ""
 
@@ -59,15 +60,17 @@ class Wordpress(ApiCall):
         return True
 
     @staticmethod
-    def _http_get(url, proxy):
+    def _http_get(url, headers, proxy):
         proxyDict = None
+        if not isinstance(headers, dict):
+            headers = None
         if proxy is not None:
             proxyDict = {
                 "http": proxy,
                 "https": proxy
                 }
         try:
-            response = requests.get(url, proxies=proxyDict)
+            response = requests.get(url, headers=headers, proxies=proxyDict)
             return response.content
         except requests.ConnectionError:
             return json.dumps([{'error': 'ConnectionError'}])
@@ -76,7 +79,7 @@ class Wordpress(ApiCall):
         """docstring for _make_request"""
         self.request(method_name)
         if self.is_empty(args):
-            data = self._http_get(self.query, self.proxy)
+            data = self._http_get(self.query, self.headers, self.proxy)
             try:
                 return json.loads(data)[0]
             except Exception:
