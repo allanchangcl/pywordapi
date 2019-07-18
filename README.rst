@@ -44,18 +44,18 @@ Get posts
 
 .. code-block:: python
 
-  from pywordapi import wordpress
+  from pywordapi import Pywordapi
   api_url = "https://demo.wp-api.org/"
-  api = wordpress.Wordpress(api_url)
+  api = Pywordapi(api_url)
   results = api.get_posts()
 
 Get categories
 
 .. code-block:: python
 
-  from pywordapi import wordpress
+  from pywordapi import Pywordapi
   api_url = "https://demo.wp-api.org/"
-  api = wordpress.Wordpress(api_url)
+  api = Pywordapi(api_url)
   results = api.get_categories()
 
 Variable **results** will return instance of type dict
@@ -64,10 +64,10 @@ Using proxy
 
 .. code-block:: python
 
-  from pywordapi import wordpress
+  from pywordapi import Pywordapi
   api_url = "https://demo.wp-api.org/"
   proxy_url = "http://username:password@IP_ADDRESS:PORT"
-  api = wordpress.Wordpress(api_url, proxy_url)
+  api = Pywordapi(api_url, proxy_url)
   results = api.get_posts()
 
 
