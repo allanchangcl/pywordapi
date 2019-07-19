@@ -38,7 +38,7 @@ class ApiCall:  # pylint: disable=too-few-public-methods
             )
 
 
-class Pywordapi(ApiCall):
+class WpRest(ApiCall):
     """ make api call and retrieve postdata from wordpress sites"""
 
     def __getattr__(self, method_name):

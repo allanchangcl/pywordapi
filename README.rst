@@ -46,7 +46,7 @@ Get posts
 
   from pywordapi import Pywordapi
   api_url = "https://demo.wp-api.org/"
-  api = Pywordapi(api_url)
+  api = Pywordapi.WpRest(api_url)
   results = api.get_posts()
 
 Get categories
@@ -55,7 +55,7 @@ Get categories
 
   from pywordapi import Pywordapi
   api_url = "https://demo.wp-api.org/"
-  api = Pywordapi(api_url)
+  api = Pywordapi.WpRest(api_url)
   results = api.get_categories()
 
 Variable **results** will return instance of type dict
@@ -67,7 +67,7 @@ Using proxy
   from pywordapi import Pywordapi
   api_url = "https://demo.wp-api.org/"
   proxy_url = "http://username:password@IP_ADDRESS:PORT"
-  api = Pywordapi(api_url, proxy_url)
+  api = Pywordapi.WpRest(api_url, proxy_url)
   results = api.get_posts()
 
 

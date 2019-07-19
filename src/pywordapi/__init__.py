@@ -1,4 +1,4 @@
-from .wordpress import Pywordapi
+from .wordpress import WpRest
 
-__all__ = ['Pywordapi']
-__version__ = '1.0.0'
+__all__ = ['WpRest']
+__version__ = '1.0.8'
