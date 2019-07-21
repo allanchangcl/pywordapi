@@ -58,7 +58,7 @@ Get categories
   api = Pywordapi.WpRest(api_url)
   results = api.get_categories()
 
-Variable **results** will return instance of type dict
+Variable **results** will return instance of type list (of dict).
 
 Using proxy
 

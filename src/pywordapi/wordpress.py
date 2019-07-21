@@ -73,15 +73,16 @@ class WpRest(ApiCall):
             response = requests.get(url, headers=headers, proxies=proxyDict)
             return response.content
         except requests.ConnectionError:
-            return json.dumps([{'error': 'ConnectionError'}])
+            return json.dumps({'error': 'ConnectionError'})
 
     def _make_request(self, method_name, args):
         """docstring for _make_request"""
         self.request(method_name)
+        # args is for debugging, if no args, proceed as normal
         if self.is_empty(args):
             data = self._http_get(self.query, self.headers, self.proxy)
             try:
-                return json.loads(data)[0]
+                return json.loads(data)
             except Exception:
                 return json.loads('{"error": "JsonDecodeError"}')
         return None

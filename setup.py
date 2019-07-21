@@ -24,7 +24,7 @@ def read(*names, **kwargs):
 
 setup(
     name="pywordapi",
-    version="1.0.8",
+    version="1.0.9",
     license="MIT license",
     description="Python Wordpress Api Library",
     long_description="%s\n%s"

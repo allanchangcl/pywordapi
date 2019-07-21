@@ -5,7 +5,7 @@ def test_get_posts():
     api_url = "https://demo.wp-api.org/"
     api = WpRest(api_url)
     results = api.get_posts()
-    assert isinstance(results, dict) is True
+    assert isinstance(results, list) is True
 
 
 def test_get_posts_with_wrong_headers():
@@ -13,7 +13,7 @@ def test_get_posts_with_wrong_headers():
     api_url = "https://demo.wp-api.org/"
     api = WpRest(api_url, headers)
     results = api.get_posts()
-    assert isinstance(results, dict) is True
+    assert isinstance(results, list) is True
 
 
 def test_get_posts_with_headers():
@@ -29,14 +29,14 @@ def test_get_posts_with_headers():
     api_url = "https://demo.wp-api.org/"
     api = WpRest(api_url, headers)
     results = api.get_posts()
-    assert isinstance(results, dict) is True
+    assert isinstance(results, list) is True
 
 
 def test_get_categories():
     api_url = "https://demo.wp-api.org/"
     api = WpRest(api_url)
     results = api.get_categories()
-    assert isinstance(results, dict) is True
+    assert isinstance(results, list) is True
 
 
 def test_get_posts_from_non_existent_site():
@@ -68,4 +68,4 @@ def test_get_categories_from_non_wordpress_site():
     # # proxy_url = ""
     # api = WpRest(api_url, proxy_url)
     # results = api.get_posts()
-    # assert isinstance(results, dict) is True
+    # assert isinstance(results, list) is True
